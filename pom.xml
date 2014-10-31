@@ -4,7 +4,7 @@
 	<groupId>com.ai.aws</groupId>
 	<artifactId>test-project</artifactId>
 	<packaging>jar</packaging>
-	<version>1.5</version>
+	<version>1.6-SNAPSHOT</version>
 
 	<properties>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -21,7 +21,7 @@
 	   <connection>scm:git:https://github.com/aidevai/test-project.git</connection>
 	   <url>https://github.com/aidevai/test-project</url>
 	   <developerConnection>scm:git:https://github.com/aidevai/test-project.git</developerConnection>
-	  <tag>test-project-1.5</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<build>
