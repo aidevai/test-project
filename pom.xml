@@ -50,7 +50,7 @@
 	              </execution>
 	           </executions>
 	           <configuration>
-	              <serverId>nexus-releases</serverId>
+	              <serverId>ai-nexus</serverId>
 	              <nexusUrl>http://${ai.mvn.srv.ip}:8081/nexus/</nexusUrl>
 	              <skipStaging>true</skipStaging>
 	           </configuration>
