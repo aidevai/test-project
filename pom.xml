@@ -4,7 +4,7 @@
 	<groupId>com.ai.aws</groupId>
 	<artifactId>test-project</artifactId>
 	<packaging>jar</packaging>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.3-SNAPSHOT</version>
 
 	<properties>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -36,6 +36,18 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+			 <groupId>org.apache.maven.plugins</groupId>
+			 <artifactId>maven-release-plugin</artifactId>
+			 <version>2.4.2</version>
+			 <configuration>
+			  <tagNameFormat>v@{project.version}</tagNameFormat>
+			  <autoVersionSubmodules>true</autoVersionSubmodules>
+			  <releaseProfiles>releases</releaseProfiles>
+			 </configuration>
+			</plugin>
+			
 	      <plugin>
 	           <groupId>org.sonatype.plugins</groupId>
 	           <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -58,42 +70,15 @@
 		</plugins>
 	</build>
 
-	<repositories>
-		<repository>
-			<id>ai-nexus</id>
-			<name>AsiaInspection Nexus</name>
-			<url>http://${ai.mvn.srv.ip}:8081/nexus/content/groups/public</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>ai-nexus</id>
-			<name>AsiaInspection Nexus</name>
-			<url>http://${ai.mvn.srv.ip}:8081/nexus/content/groups/public</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<distributionManagement>
 		<repository>
-			<id>ai-nexus</id>
+			<id>nexus-releases</id>
 			<name>AI Nexus Release Repository</name>
 			<url>http://${ai.mvn.srv.ip}:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>ai-nexus</id>
+			<id>nexus-snapshots</id>
 			<name>AI Nexus Snapshot Repository</name>
 			<url>http://${ai.mvn.srv.ip}:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
