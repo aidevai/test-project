@@ -5,28 +5,17 @@
 	<groupId>com.ai.aws</groupId>
 	<artifactId>test-project</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.0-SNAPSHOT</version>
 
 	<properties>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<ai.mvn.srv.ip>202.134.87.204</ai.mvn.srv.ip> <!--202.134.87.204 or 192.168.0.42 -->
+		<ai.mvn.srv.ip>aidev.asiainspection.com</ai.mvn.srv.ip> <!--202.134.87.204 or 192.168.0.42 -->
 		<org.springframework-version>3.2.3.RELEASE</org.springframework-version>
 		<maven.surefire.plugin.version>2.6</maven.surefire.plugin.version>
 
 	</properties>
-
-	<dependencies>
-
-		<!-- Test & mock -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 
 
 	<scm>
