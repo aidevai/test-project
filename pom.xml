@@ -11,8 +11,6 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<ai.mvn.srv.ip>aidev.asiainspection.com</ai.mvn.srv.ip> <!--202.134.87.204 or 192.168.0.42 -->
-		<org.springframework-version>3.2.3.RELEASE</org.springframework-version>
-		<maven.surefire.plugin.version>2.6</maven.surefire.plugin.version>
 
 	</properties>
 
